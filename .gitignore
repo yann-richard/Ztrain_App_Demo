@@ -1,0 +1,22 @@
+# Intellij
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Project files
+config/config.properties
+
+target/
+apks/
+Thumbs.db
+*.DS_Store
+
+# Eclipse project files
+.classpath
+.project
+
+# Package Files #
+*.jar
+*.war
+*.ear
