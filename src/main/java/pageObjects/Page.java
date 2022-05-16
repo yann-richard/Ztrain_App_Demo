@@ -13,8 +13,8 @@ import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.ios.IOSTouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Attachment;
+//import io.qameta.allure.Allure;
+//import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -49,9 +49,10 @@ public class Page {
 
     protected SystemPropertiesReader systemPropertiesReader;
     protected ConfigPropertiesReader configPropertiesReader;
+    public static int isConnected = 0;
 
-    @AndroidFindBy(id = "com.pictime.nocibe:id/home_navigation")
-    private MobileElement homeView;
+    /*@AndroidFindBy(id = "com.pictime.nocibe:id/home_navigation")
+    private MobileElement homeView;*/
 
     public Page() {
         driver = Properties.APPIUM_DRIVER_MANAGER.getDriver();
@@ -148,11 +149,11 @@ public class Page {
         return occurence;
     }
 
-    @Attachment(value = "screenshot", type = "image/png")
-    public static void saveScreenShotPNG(){
-        Allure.addAttachment("screenshot", new ByteArrayInputStream(((TakesScreenshot) Properties
-                .APPIUM_DRIVER_MANAGER.getDriver())
-                .getScreenshotAs(OutputType.BYTES)));
-    }
+//    @Attachment(value = "screenshot", type = "image/png")
+//    public static void saveScreenShotPNG(){
+//        Allure.addAttachment("screenshot", new ByteArrayInputStream(((TakesScreenshot) Properties
+//                .APPIUM_DRIVER_MANAGER.getDriver())
+//                .getScreenshotAs(OutputType.BYTES)));
+//    }
 
 }

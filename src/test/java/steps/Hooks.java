@@ -22,7 +22,7 @@ public class Hooks {
 
     @After
     public void closeApp() {
-        Page.saveScreenShotPNG();
+//        Page.saveScreenShotPNG();
         driver.closeApp();
     }
 

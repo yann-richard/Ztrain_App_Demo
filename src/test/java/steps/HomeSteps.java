@@ -35,4 +35,14 @@ public class HomeSteps {
     public void userIsOnHomepage() {
         homePage.goToHomeboard();
     }
+
+    @Given("User is on cartpage")
+    public void userIsOnCartpage() {
+        homePage.goToCartPage();
+    }
+
+    @Then("User should return on homepage view")
+    public void returnOnHomepageView() {
+        Assert.assertEquals(homePage.verifyHomeView(),true);
+    }
 }
